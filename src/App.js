@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Img} from 'react-image';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <h1>Fail safe image rendering</h1>
+        <Img src={
+          [
+            'https://cdn.quicksell.co/-KpFi1XEDgH1mY5k1fSo/products_100/-M7q3olCZCehB9AGbn2y.jpg',
+            'https://cdn.quicksell.co/-KpFi1XEDgH1mY5k1fSo/products_200/-M7q3olCZCehB9AGbn2y.jpg',
+            'https://cdn.quicksell.co/-KpFi1XEDgH1mY5k1fSo/products_400/-M7q3olCZCehB9AGbn2y.jpg',
+            'https://cdn.quicksell.co/-KpFi1XEDgH1mY5k1fSo/products/-M7q3olCZCehB9AGbn2y.jpg'
+          ]
+        }/>
+      </div>
+    );
+  }
 }
 
 export default App;
